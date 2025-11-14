@@ -1,4 +1,9 @@
-![icon](https://github.com/user-attachments/assets/0b433b0d-d37e-4839-9725-f8f7e157bbed)# Q-Menu Quick Launcher - 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0b433b0d-d37e-4839-9725-f8f7e157bbed" width="180" />
+</p>
+# 
+
+Q-Menu Quick Launcher - 
 
 
 
