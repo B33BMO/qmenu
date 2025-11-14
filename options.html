@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q-Menu Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .subtitle {
+      color: #999;
+      margin-bottom: 30px;
+    }
+    .section {
+      background: #2a2a2a;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+    }
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    textarea {
+      width: 100%;
+      height: 400px;
+      border-radius: 6px;
+      padding: 12px;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      border: 1px solid #444;
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      resize: vertical;
+      overflow-y: auto;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #5b9cff;
+    }
+    textarea::-webkit-scrollbar {
+      width: 10px;
+    }
+    textarea::-webkit-scrollbar-track {
+      background: #0a0a0a;
+      border-radius: 4px;
+    }
+    textarea::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 4px;
+    }
+    textarea::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .button-group {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: #e0e0e0;
+      background: #333;
+      border: 1px solid #444;
+      transition: all 0.2s;
+    }
+    button:hover {
+      background: #3a3a3a;
+      border-color: #555;
+    }
+    button.primary {
+      background: #5b9cff;
+      border-color: #5b9cff;
+      color: #fff;
+    }
+    button.primary:hover {
+      background: #4a8ae8;
+      border-color: #4a8ae8;
+    }
+    button.danger {
+      background: #d93025;
+      border-color: #d93025;
+      color: #fff;
+    }
+    button.danger:hover {
+      background: #c7291f;
+      border-color: #c7291f;
+    }
+    .info-box {
+      background: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 20px;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .info-box code {
+      background: #1a1a1a;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #5b9cff;
+      font-family: monospace;
+    }
+    .status {
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 12px;
+      display: none;
+    }
+    .status.success {
+      background: rgba(52, 168, 83, 0.2);
+      border: 1px solid rgba(52, 168, 83, 0.4);
+      color: #81c995;
+    }
+    .status.error {
+      background: rgba(217, 48, 37, 0.2);
+      border: 1px solid rgba(217, 48, 37, 0.4);
+      color: #f28b82;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Q-Menu Settings</h1>
+    <p class="subtitle">Configure your quick launcher rules and commands</p>
+
+    <div class="info-box">
+      <strong>How to use:</strong><br>
+      • Press <code>Ctrl+Q</code> anywhere to open the launcher<br>
+      • Type a command (e.g., "github", "gmail", "youtube") and press Enter<br>
+      • Rules format: <code>command = https://url.here</code><br>
+      • Lines starting with <code>#</code> are comments
+    </div>
+
+    <div class="section">
+      <div class="section-title">Rules Editor</div>
+      <textarea id="rules" spellcheck="false" placeholder="Loading..."></textarea>
+      <div class="button-group">
+        <button id="save" class="primary">Save Rules</button>
+        <button id="rebuild">Rebuild Commands</button>
+        <button id="reset" class="danger">Reset to Defaults</button>
+      </div>
+      <div id="status" class="status"></div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

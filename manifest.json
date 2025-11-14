@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Q-Menu Quick Launcher",
+  "version": "3.0.1",
+  "description": "Quick launcher for custom URLs and commands. Press Ctrl+Q to activate.",
+  "author": "BMO",
+  "homepage_url": "https://bmo.guru/",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+
+  "action": {
+    "default_title": "Q-Menu Quick Launcher (Ctrl+Q)",
+    "default_popup": "popup.html"
+  },
+
+  "icons": {
+    "48": "icon48.png",
+    "96": "icon96.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "qmenu@bmo.guru",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "developer": {
+    "name": "BMO",
+    "url": "https://bmo.guru/"
+  }
+}

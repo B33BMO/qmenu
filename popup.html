@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q-Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+    }
+    h2 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    p {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .shortcut {
+      background: #2a2a2a;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .shortcut code {
+      color: #5b9cff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: #fff;
+      background: #5b9cff;
+      border: 1px solid #5b9cff;
+      margin-bottom: 8px;
+      transition: all 0.2s;
+    }
+    button:hover {
+      background: #4a8ae8;
+      border-color: #4a8ae8;
+    }
+    button.secondary {
+      background: #333;
+      border-color: #444;
+      color: #e0e0e0;
+    }
+    button.secondary:hover {
+      background: #3a3a3a;
+      border-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>Q-Menu Quick Launcher</h2>
+  <p>Fast command-based navigation for your workflows.</p>
+
+  <div class="shortcut">
+    Press <code>Ctrl+Q</code> to open
+  </div>
+
+  <button id="openSettings" class="secondary">Open Settings</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
