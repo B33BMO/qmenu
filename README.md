@@ -1,4 +1,9 @@
-# Q-Menu Quick Launcher
+# Q-Menu Quick Launcher - 
+![icon](https://github.com/user-attachments/assets/a830389e-085c-451c-b2c8-eb26652a5f5e)<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#1a1a1a"/>
+  <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#5b9cff" text-anchor="middle">Q</text>
+</svg>
+
 
 A Firefox extension for fast command-based navigation. Type commands like "router cap" or "pm1 cap" and jump to your frequently-used URLs instantly.
 
